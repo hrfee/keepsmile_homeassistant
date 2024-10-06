@@ -1,5 +1,10 @@
 from .constants import KS03OldScene
-from cheshire.generic.platform_command import PlatformCommand
+import sys, os
+current = os.path.dirname(os.path.realpath(__file__))
+parent = os.path.dirname(os.path.dirname(os.path.dirname(current)))
+sys.path.append(parent)
+
+from generic.platform_command import PlatformCommand
 from struct import Struct
 
 class KS03OldSwitchCommand(PlatformCommand):

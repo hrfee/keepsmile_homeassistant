@@ -2,7 +2,11 @@ from dataclasses import dataclass
 from bleak import BleakClient
 from bleak.backends.device import BLEDevice
 
-from cheshire.communication.transmitter import Transmitter
+import sys, os
+current = os.path.dirname(os.path.realpath(__file__))
+parent = os.path.dirname(current)
+sys.path.append(parent)
+from communication.transmitter import Transmitter
 
 
 @dataclass

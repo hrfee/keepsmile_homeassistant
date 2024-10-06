@@ -1,6 +1,10 @@
 from abc import ABC, abstractmethod
 
-from cheshire.generic.platform_command import PlatformCommand
+import sys, os
+current = os.path.dirname(os.path.realpath(__file__))
+parent = os.path.dirname(current)
+sys.path.append(parent)
+from generic.platform_command import PlatformCommand
 
 
 class Transmitter(ABC):
