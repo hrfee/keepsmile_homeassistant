@@ -1,5 +1,10 @@
 # BJ_LED
 
+## Fork Note
+
+Forked as homeassistant requires a newer version of the [bleak](https://pypi.org/project/bleak/0.12.0/#history) library than the library this package uses ([cheshire](https://pypi.org/project/cheshire/)) states support for.
+Rather than forking cheshire and setting up a PyPI listing for a tiny fix I just included the library with this integration, which was more annoying than expected.
+
 Home Assistant custom integration for BJ_LED devices controlled by the MohuanLED app over Bluetooth LE.
 
 These were the cheapest Bluetooth controlled LEDs I could find on AliExpress.  5M of 5050 LEDs for £2.67.  The app is basic, but it works.  The IR remote is basic, but it works.  The lights connect to a USB port.
